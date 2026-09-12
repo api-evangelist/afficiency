@@ -64,5 +64,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Afficiency is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Afficiency is a New York-based insurtech that designs, digitally underwrites and issues life insurance
+products on behalf of carrier and reinsurance partners, and distributes them through a 100% digital,
+API-first platform. Its product suite spans level term, final expense whole life, participating whole
+life, indexed universal life and annual renewable term, all issued without a medical exam and with
+instant underwriting decisions in a single session. Partners integrate through a hosted white-label
+storefront, a direct REST API integration covering the full quote-to-policy-issue journey, or a hybrid
+of the two.
+
+- https://www.afficiency.com/
+
+**No public API contract.** Afficiency markets a REST API but publishes no OpenAPI, GraphQL SDL,
+AsyncAPI, Protobuf or WSDL, and no public API reference. Documentation is pointed at
+`support.afficiency.com`, a customer portal that answers 404 anonymously; `api.afficiency.com` sits
+behind Cloudflare with an unreachable origin (HTTP 522). See the `x-coverage` block in `apis.yml`.
+
+**Consent signal.** Afficiency publishes a Cloudflare Content Signals policy
+(`Content-Signal: search=yes,ai-train=no,use=reference`) and disallows nine named AI crawlers. This
+profile was built with ordinary anonymous requests against the wildcard-allowed surface. The verbatim
+policy is saved at `well-known/afficiency-robots.txt`.

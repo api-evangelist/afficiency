@@ -1,0 +1,97 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.afficiency.com/
+note: >-
+  Compliance and standards claims read off Afficiency's own public pages. There is no public
+  OpenAPI, GraphQL SDL, AsyncAPI or other machine-readable contract for this provider (every
+  discovery probe missed — see well-known/afficiency-well-known.yml and the x-coverage block in
+  apis.yml), so NOTHING here is derived from a specification. Every entry below is a claim the
+  company publishes about itself, with the URL it appears on.
+
+sector: insurance
+regime: Insurance (NAIC/solvency, state DOI rules, IDD)
+
+conformance:
+  - id: soc2-type-ii
+    name: SOC 2 Type II
+    conforms: true
+    evidence: https://www.afficiency.com/
+    evidence_detail: >-
+      "SOC 2 Type II Certified" is rendered in the site-wide footer of every page on
+      www.afficiency.com, including the home page, the integration page and the product suite page.
+    verified: '2026-09-12'
+    caveat: >-
+      This is the provider's own published assertion. No attestation report, auditor name, report
+      date, or trust-center page was found — trust.afficiency.com does not resolve, and
+      0-working/probe-security-programs.py returned trust=none.
+
+  - id: glba
+    name: Gramm-Leach-Bliley Act (GLBA)
+    conforms: true
+    evidence: https://www.afficiency.com/privacy-policy/
+    evidence_detail: >-
+      Privacy Policy: "We adhere to applicable federal and state privacy laws, including but not
+      limited to the Gramm-Leach-Bliley Act (GLBA), the California Consumer Privacy Act (CCPA), and
+      other applicable regulations."
+    verified: '2026-09-12'
+
+  - id: ccpa
+    name: California Consumer Privacy Act (CCPA)
+    conforms: true
+    evidence: https://www.afficiency.com/privacy-policy/
+    evidence_detail: >-
+      Named in the same Privacy Policy sentence as GLBA, alongside a statement of administrative,
+      technical and physical safeguards and encryption of data in transit and at rest.
+    verified: '2026-09-12'
+
+  - id: encryption-at-rest-and-in-transit
+    name: Encryption in transit and at rest
+    conforms: true
+    evidence: https://www.afficiency.com/privacy-policy/
+    evidence_detail: >-
+      Privacy Policy, "Security of Your Information": "encryption of data in transit and at rest,
+      access controls, regular security assessments, and employee training."
+    verified: '2026-09-12'
+
+  - id: tls-1-3
+    name: TLS 1.3 on the public web surface
+    conforms: true
+    evidence: https://www.afficiency.com/
+    evidence_detail: >-
+      Probed 2026-09-12 — www.afficiency.com negotiates TLSv1.3. HSTS is NOT served on the web host.
+      See security/afficiency-domain-security.yml.
+    verified: '2026-09-12'
+
+# --- Domain-standard signature (0.12.0 domain_standard_conformance) ----------------------------
+# REWARD-ONLY. Recorded as NOT FOUND rather than omitted, so a later round can tell "we looked and
+# there was nothing" apart from "nobody checked". The insurance regime's standards shortlist in
+# scoring.yml is: acord, acord-al3, acord-xml, ngds, grlc, cieca-bms, csio.
+domain_standards:
+  checked: '2026-09-12'
+  found: false
+  note: >-
+    No ACORD (AL3 or XML), NGDS, GRLC, CIECA BMS or CSIO signature could be looked for in a contract,
+    because Afficiency publishes no contract. The full public marketing and legal surface —
+    home, product-overview, how-afficiency-can-work-for-you, embedded-insurance, digital_life_insurance,
+    risk_screening_tools_digital_insurance, carrier-partners, customer-support, FAQ, press-room,
+    privacy-policy and terms-of-service — was fetched and searched for these tokens and none appears.
+    The company describes its integration surface only as a "robust RESTful API suite" with
+    "well-documented endpoints for quoting, underwriting, policy issuance, and administration".
+  candidates_probed: [acord, acord-al3, acord-xml, ngds, grlc, cieca-bms, csio]
+
+# --- Cross-cutting API standards ---------------------------------------------------------------
+# Not assertable either way: these are properties of a contract, and no contract is published.
+api_standards:
+  checked: '2026-09-12'
+  determinable: false
+  note: >-
+    oauth2, oidc, rfc9457 problem+json, pagination style, idempotency and versioning are all
+    properties of the API contract. Afficiency's contract is not public, so each is UNKNOWN — it is
+    neither asserted nor denied here. An honest unknown; not a zero.
+  unknown:
+    - oauth2
+    - oidc
+    - rfc9457
+    - pagination
+    - idempotency
+    - api-versioning

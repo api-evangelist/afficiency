@@ -1,0 +1,215 @@
+generated: '2026-09-12'
+method: probed
+source: https://www.afficiency.com/
+note: >-
+  Every named /.well-known/ path was probed anonymously on every host this record knows and NONE
+  returned a document. No `WellKnown`, `SecurityTxt`, `APICatalog` or `AgentCard` pointer is emitted
+  in apis.yml — this file records a measured ABSENCE, not a published surface. The apex and www hosts
+  answer 404 with the Next.js not-found HTML shell; api.afficiency.com resolves through Cloudflare but
+  the origin is unreachable to anonymous clients (HTTP 522, "error code: 522"), so nothing there could
+  be read; support.afficiency.com is a HubSpot-hosted portal (x-hs-portal-id 22504959) that answers 404
+  to anonymous requests on every path including its own root.
+
+hosts:
+  - host: afficiency.com
+    role: registrable domain
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+
+  - host: www.afficiency.com
+    role: primary website and marketing host
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+
+  - host: api.afficiency.com
+    role: >-
+      API gateway host — resolves to Cloudflare (172.67.69.163, 104.26.12.151, 104.26.13.151) but the
+      origin does not answer, so every path returns Cloudflare's 522 origin-timeout page. The host is
+      not named as a base URL in any public Afficiency document; it is recorded here because DNS and
+      the CDN edge prove it exists, NOT as an asserted baseURL.
+    documents:
+      - path: /.well-known/security.txt
+        status: 522
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 522
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 522
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 522
+        file: null
+      - path: /.well-known/api-catalog
+        status: 522
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 522
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 522
+        file: null
+      - path: /.well-known/agent.json
+        status: 522
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 522
+        file: null
+
+  - host: support.afficiency.com
+    role: >-
+      Customer support portal (HubSpot). The company's own customer-support page names it as the place
+      to "access our online support portal for tickets, documentation, and resources", but it answers
+      404 to anonymous clients on every path, including the root.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+
+  - host: trail.afficiency.com
+    role: >-
+      Secondary host found in Certificate Transparency logs; returns a 306-byte HTML page at the root.
+      Probed for completeness.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+        file: null
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+      - path: /.well-known/aauth-resource.json
+        status: 404
+        file: null
+
+# Not a /.well-known/ document, but a real machine-readable consent signal the provider DOES publish.
+# Saved verbatim to well-known/afficiency-robots.txt and pointed at from apis.yml as type ContentSignal.
+content_signals:
+  - host: www.afficiency.com
+    path: /robots.txt
+    status: 200
+    file: afficiency-robots.txt
+    fetched: '2026-09-12'
+    directive: 'Content-Signal: search=yes,ai-train=no,use=reference'
+    applies_to: 'User-agent: *'
+    framework: Cloudflare Content Signals Policy
+    reserves_rights_under: EU Directive 2019/790 Article 4 (text and data mining opt-out)
+    interpretation: >-
+      Indexing for search is permitted; using the content to train or fine-tune AI models is refused;
+      AI consumption is permitted at the "reference" level. `ai-input` is not declared either way.
+    named_crawlers_disallowed:
+      - Amazonbot
+      - Applebot-Extended
+      - Bytespider
+      - CCBot
+      - ClaudeBot
+      - CloudflareBrowserRenderingCrawler
+      - Google-Extended
+      - GPTBot
+      - meta-externalagent
+    note: >-
+      Nine named AI crawlers are Disallow: / while the wildcard agent is Allow: /. This profile was
+      built with ordinary anonymous HTTP requests against the wildcard-allowed surface; none of the
+      disallowed agents were used and no access control was defeated.
+
+  - host: afficiency.com
+    path: /llms.txt
+    status: 404
+    file: null
+  - host: www.afficiency.com
+    path: /llms.txt
+    status: 404
+    file: null

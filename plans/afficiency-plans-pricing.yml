@@ -1,0 +1,41 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.afficiency.com/
+plan_count: 0
+pricing_model: not-published
+note: >-
+  Afficiency publishes NO pricing, plans, tiers, quotas or rate cards anywhere on its public site.
+  The full public site was crawled on 2026-09-12 — there is no /pricing, /plans or /costs page, no
+  pricing entry in the navigation (What We Do / How We Work With You / Company / Resources) and no
+  price in the footer's Platform, Distributors, Resources or Legal columns. Every commercial call to
+  action on every page is the same "Book a Demo" button, which opens a contact form. This is the
+  expected shape for a B2B2C insurtech: Afficiency is compensated inside the insurance economics of
+  each carrier and distribution deal (commissions, per-policy and per-product arrangements), not by a
+  published per-call API price list, so the absence is a business-model fact and not an oversight.
+  Recorded as plan_count 0 rather than omitting the file, so the zero is measured rather than assumed.
+
+search_performed:
+  - url: https://www.afficiency.com/
+    status: 200
+    result: no pricing element in nav, body or footer
+  - url: https://www.afficiency.com/how-afficiency-can-work-for-you/
+    status: 200
+    result: >-
+      Three integration models described (White Label, API Integration, Hybrid) with feature lists
+      and no price attached to any of them.
+  - url: https://www.afficiency.com/product-overview/
+    status: 200
+    result: >-
+      Five product lines with coverage bands and issue ages (Level Term $25,000-$2,000,000 ages 18-60;
+      Final Expense Whole Life $5,000-$25,000 ages 45-80; Participating Whole Life $25,000-$500,000
+      ages 18-65; Indexed Universal Life $100,000-$2,000,000 ages 18-65; Annual Renewable Term
+      $25,000-$500,000 ages 18-65). These are insurance coverage limits, NOT API plan quotas, and are
+      deliberately not recorded as plans.
+  - url: https://www.afficiency.com/book-a-demo/
+    status: 200
+    result: contact form; the only route to commercial terms
+  - url: https://www.afficiency.com/frequently-asked-questions/
+    status: 200
+    result: no pricing question or answer
+
+plans: []

@@ -1,0 +1,55 @@
+generated: '2026-09-12'
+method: searched
+source: public package registries + https://github.com/Afficiency
+package_count: 0
+official_sdk_count: 0
+note: >-
+  No first-party Afficiency client library exists in any public package registry, and no SDK is
+  offered anywhere on the public site. Recorded as a measured zero. NO `SDKs` pointer is emitted in
+  apis.yml — the sdk_count checks must not fire on an empty set.
+
+registries_searched:
+  - registry: npm
+    endpoint: https://registry.npmjs.org/-/v1/search?text=afficiency
+    result: 0 matches
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/afficiency/json
+    status: 404
+    result: no such project
+  - registry: rubygems
+    endpoint: https://rubygems.org/api/v1/search.json?query=afficiency
+    result: empty array
+  - registry: crates.io
+    endpoint: https://crates.io/api/v1/crates?q=afficiency
+    result: 0 matches
+  - registry: nuget
+    endpoint: https://azuresearch-usnc.nuget.org/query?q=afficiency
+    result: totalHits 0
+  - registry: packagist
+    endpoint: https://packagist.org/search.json?q=afficiency
+    result: no Afficiency-owned package (only unrelated fuzzy matches)
+
+source_control:
+  - org: https://github.com/Afficiency
+    status: 200
+    public_repos: 0
+    created: '2023-07-14'
+    note: >-
+      A GitHub organization named "Afficiency" exists and is reachable, but it publishes ZERO public
+      repositories and carries no description, website or location. Nothing on afficiency.com links
+      to it, so ownership is unproven — it is recorded here as an observation and deliberately NOT
+      wired as a `GitHubOrganization` pointer in apis.yml, which would assert a first-party source
+      presence this pipeline cannot demonstrate.
+
+docs_searched:
+  - url: https://www.afficiency.com/how-afficiency-can-work-for-you/
+    status: 200
+    result: >-
+      "Full control and maximum flexibility through our robust RESTful API suite" — no SDK, no
+      client library, no code sample, no download.
+  - url: https://www.afficiency.com/embedded-insurance/
+    status: 200
+    result: >-
+      "our RESTful APIs are well-documented, developer-friendly" — no library named in any language.
+
+packages: []

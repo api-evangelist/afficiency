@@ -1,0 +1,43 @@
+generated: '2026-09-12'
+method: searched
+source: https://www.afficiency.com/embedded-insurance/
+limit_count: 0
+note: >-
+  No rate limits are published. Afficiency markets a "robust RESTful API suite" whose endpoints are
+  described as "well-documented", but the documentation itself is not public — it sits behind the
+  customer support portal and a sales conversation (see the x-coverage block in apis.yml), so no
+  quota, window, burst, throttle, concurrency ceiling or 429 behaviour could be read. No response
+  headers could be observed either: api.afficiency.com resolves through Cloudflare but its origin
+  does not answer anonymous requests (HTTP 522 on every path probed 2026-09-12), so there is no live
+  unauthenticated response from which to read X-RateLimit-*, RateLimit-* or Retry-After. Recorded as
+  an honest measured zero rather than omitting the file.
+
+response_headers:
+  observed: false
+  reason: >-
+    No anonymously reachable API endpoint. Every path on api.afficiency.com returned Cloudflare's
+    522 origin-timeout page rather than an application response.
+  headers: []
+
+status_on_exhaustion: unknown
+
+search_performed:
+  - url: https://www.afficiency.com/embedded-insurance/
+    status: 200
+    result: >-
+      "Built for modern integration patterns, our RESTful APIs are well-documented,
+      developer-friendly, and designed for reliability at scale." No numbers.
+  - url: https://www.afficiency.com/how-afficiency-can-work-for-you/
+    status: 200
+    result: API Integration model described; no limits, no SLA, no throughput figure
+  - url: https://www.afficiency.com/frequently-asked-questions/
+    status: 200
+    result: no rate-limit or throughput question
+  - url: https://api.afficiency.com/
+    status: 522
+    result: Cloudflare origin timeout; no headers to read
+  - url: https://support.afficiency.com/
+    status: 404
+    result: HubSpot support portal returns 404 to anonymous clients
+
+rate_limits: []
