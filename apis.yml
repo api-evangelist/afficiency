@@ -27,7 +27,7 @@ tags:
 - Insurtech
 - Embedded Insurance
 - Underwriting
-- Financial-Services
+- Financial Services
 - Policy Administration
 tags_raw:
 - Company
@@ -38,6 +38,7 @@ tags_raw:
 - Underwriting
 - Financial Services
 - Policy Administration
+- Financial-Services
 apis: []
 maintainers:
 - FN: Kin Lane
