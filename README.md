@@ -64,22 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Afficiency is a New York-based insurtech that designs, digitally underwrites and issues life insurance
-products on behalf of carrier and reinsurance partners, and distributes them through a 100% digital,
-API-first platform. Its product suite spans level term, final expense whole life, participating whole
-life, indexed universal life and annual renewable term, all issued without a medical exam and with
-instant underwriting decisions in a single session. Partners integrate through a hosted white-label
-storefront, a direct REST API integration covering the full quote-to-policy-issue journey, or a hybrid
-of the two.
+Afficiency is a New York-based insurtech that designs, digitally underwrites and issues life insurance products on behalf of carrier and reinsurance partners, and distributes them through a 100% digital, API-first platform. Its product suite spans level term, final expense whole life, participating whole life, indexed universal life and annual renewable term, all issued without a medical exam and with instant underwriting decisions in a single session. Partners integrate through one of three models — a hosted white-label storefront, a direct REST API integration covering the full quote-to-policy-issue journey, or a hybrid of the two — which lets agencies, P&C agents, financial advisors, worksite and affinity channels and embedded fintech partners offer life insurance inside their own customer journeys. Afficiency states it is SOC 2 Type II certified. Its REST API suite is marketed publicly, but the reference and any machine-readable contract are reachable only through the customer support portal or a sales conversation.
 
-- https://www.afficiency.com/
+**Areas:** Company · Insurance · Life Insurance · Insurtech · Embedded Insurance · Underwriting · Financial Services · Policy Administration
 
-**No public API contract.** Afficiency markets a REST API but publishes no OpenAPI, GraphQL SDL,
-AsyncAPI, Protobuf or WSDL, and no public API reference. Documentation is pointed at
-`support.afficiency.com`, a customer portal that answers 404 anonymously; `api.afficiency.com` sits
-behind Cloudflare with an unreachable origin (HTTP 522). See the `x-coverage` block in `apis.yml`.
+## Afficiency on APIs.io
 
-**Consent signal.** Afficiency publishes a Cloudflare Content Signals policy
-(`Content-Signal: search=yes,ai-train=no,use=reference`) and disallows nine named AI crawlers. This
-profile was built with ordinary anonymous requests against the wildcard-allowed surface. The verbatim
-policy is saved at `well-known/afficiency-robots.txt`.
+Everything profiled for Afficiency is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/afficiency/](https://apis.io/providers/afficiency/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Afficiency Domain Security](https://apis.io/security/afficiency/afficiency-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Afficiency Plans Pricing](https://apis.io/plans/afficiency/afficiency-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Afficiency Rate Limits](https://apis.io/rate-limits/afficiency/afficiency-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.afficiency.com/)
+- [Support](https://www.afficiency.com/customer-support/)
+- [Terms of service](https://www.afficiency.com/terms-of-service/)
+- [Privacy policy](https://www.afficiency.com/privacy-policy/)
+
+## API Evangelist rating
+
+**Kin Score 14.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 28.9 |
+
+**Agent readiness 4.7** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | yes |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.1** — Insurance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/afficiency/](https://apis.io/providers/afficiency/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Afficiency: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/afficiency/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
