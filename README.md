@@ -105,18 +105,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 14.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 14.8** — emerging · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
-| Discoverability | 49.1 |
+| Discoverability | 50.0 |
 | Contract quality | 0.0 |
 | Contract governance | 18.2 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 4.8 |
-| Access clarity | 28.9 |
+| Access clarity | 34.0 |
 
-**Agent readiness 4.7** — human-only
+**Agent readiness 3.5** — human-only
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -132,15 +132,21 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Event Surface Described | — |
 | Agent Skills | — |
 | Well Known Catalog | — |
-| Consent Identity | yes |
+| Consent Identity | signal |
 | Agent Card | — |
 | Dry Run Mode | — |
 | Delegated Identity | — |
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 21.1** — Insurance
+**Regulatory alignment 15.8** — Insurance
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/afficiency/](https://apis.io/providers/afficiency/).
 
